@@ -2,37 +2,19 @@
 
 using namespace std;
 
-main()
+int main()
 {
-    double Hour = 80;
+    int arr[5][5] = {{1,0,0,0,1},
+               {0,1,0,1,0},
+               {0,0,1,0,0},
+               {0,1,0,1,0},
+               {1,0,0,0,1}};
 
-    cout <<"Type in a hour:" << endl;
-    cin >> Hour;
-
-    if (Hour < 12 &&  Hour >= 5) {
-        cout <<"Morning" << endl;
-  } else if(Hour == 12 ){
-        cout <<"Noon" << endl;
-  } else if(Hour < 20 && Hour > 12){
-        cout <<"Afternoon" << endl;
-  } else if (Hour > 24){
-        cout <<"Not an Hour" << endl;
-}
-    else if(Hour < 5 || Hour >= 20){
-        cout <<"Night" << endl;
-  }
-return 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
+    for (int i = 0;i < 5;i++){
+        for (int s = 0;s < 5;s++){
+            cout << arr[i][s] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
 }
