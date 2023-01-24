@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+class book {
+public:
+    int pages;
+    string author;
+    int year;
+    void print_all(void);
+};
+
+void book::print_all() {
+    cout << "This book has "<< pages <<" pages. The author is "<< author <<". This book was written in "<< year << endl;
+}
+int main() {
+    book b1;
+
+    b1.pages = 74;
+    b1.author = "J.K.Rowling";
+    b1.year = 2009;
+
+    b1.print_all();
+}
