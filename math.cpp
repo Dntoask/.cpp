@@ -6,18 +6,16 @@ int main()
 {
     int a;
     int b;
-
-
+    
     cout << "Input number :" << endl;
     cin >> a;
-
-    cout << "Select operation - + * RANDOM:" << endl;
+    
+    cout << "Input number :" << endl;
+    cin >> b;
+    
+    cout << "Select operation : - + * RANDOM:" << endl;
     string operation;
     cin >> operation;
-
-    cout << "Input number" << endl;
-    cin >> b;
-
 
     if (operation == "+") {
         cout << "a + b = " << a + b << endl;
