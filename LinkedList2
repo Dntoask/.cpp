@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+
+struct Node
+{
+    int data;
+    struct Node *next;
+};
+void print_list(struct Node* head)
+{
+    Node* current = head;
+    while (current != NULL)
+    {
+       cout << current->data << endl;
+       current = current->next;
+    }
+}
+void insert_at_Node(int data, struct Node* current)
+{
+    struct Node* n = new Node;
+    n->data = data;
+    n->next = current->next;
+    current->next = n;
+}
+void remove_front(struct Node** head_ptr)
+{
+    *head_ptr = (*head_ptr)->next;
+}
+ int find_last(struct Node* head)
+{
+    struct Node* node = head;
+
+    if ( node == NULL )
+        return -1;
+
+    while (node != NULL) {
+         if ( node->next == NULL )
+            return node->data;
+
+        node = node->next;
+    }
+}
+int main()
+{
+    return 0;
+}
