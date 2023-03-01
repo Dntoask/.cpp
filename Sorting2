@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int arr[6] = {4, 2, 7, 9, 3, 8};
+    int length = 6;
+
+    for (int i = 0 ; i < length; i++){
+        int new_integer = arr[i];
+        int my_position = i;
+
+        while (!my_position > 0 || new_integer > arr[my_position - 1]){
+            if (new_integer < arr[my_position - 1]){
+                int temp = arr[my_position];
+                arr[my_position] = arr[my_position - 1];
+                arr[my_position - 1] = temp;
+            }
+        }
+    }
+}
